@@ -1,0 +1,12 @@
+[
+  {"service": "checkout-api", "latency_ms": 950, "error_rate": 12.8, "cpu_pct": 72, "memory_pct": 76, "dependency_health": "degraded"},
+  {"service": "payment-api", "latency_ms": 420, "error_rate": 9.2, "cpu_pct": 38, "memory_pct": 51, "dependency_health": "degraded"},
+  {"service": "auth-service", "latency_ms": 310, "error_rate": 6.1, "cpu_pct": 69, "memory_pct": 96, "dependency_health": "healthy"},
+  {"service": "inventory-service", "latency_ms": 220, "error_rate": 3.8, "cpu_pct": 45, "memory_pct": 54, "dependency_health": "degraded"},
+  {"service": "search-api", "latency_ms": 860, "error_rate": 8.4, "cpu_pct": 57, "memory_pct": 61, "dependency_health": "degraded"},
+  {"service": "gateway", "latency_ms": 500, "error_rate": 10.3, "cpu_pct": 40, "memory_pct": 48, "dependency_health": "degraded"},
+  {"service": "cache-layer", "latency_ms": 180, "error_rate": 2.6, "cpu_pct": 63, "memory_pct": 70, "dependency_health": "healthy"},
+  {"service": "notification-worker", "latency_ms": 270, "error_rate": 5.7, "cpu_pct": 52, "memory_pct": 57, "dependency_health": "degraded"},
+  {"service": "db-proxy", "latency_ms": 760, "error_rate": 11.1, "cpu_pct": 66, "memory_pct": 67, "dependency_health": "degraded"},
+  {"service": "unknown-service", "latency_ms": 120, "error_rate": 0.8, "cpu_pct": 20, "memory_pct": 25, "dependency_health": "healthy"}
+]

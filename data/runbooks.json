@@ -1,0 +1,42 @@
+[
+  {
+    "id": "RB-001",
+    "service": "checkout-api",
+    "title": "Checkout DB timeout triage",
+    "symptoms": ["DB_TIMEOUT", "p95 latency", "5xx spike"],
+    "categories": ["database", "latency"],
+    "content": "If checkout-api has DB_TIMEOUT and rising p95 latency, check connection pool usage, recent deploy, and failover events."
+  },
+  {
+    "id": "RB-002",
+    "service": "payment-api",
+    "title": "TLS certificate expiry handling",
+    "symptoms": ["x509", "certificate expired", "handshake failed"],
+    "categories": ["security", "network"],
+    "content": "Rotate certificates, validate trust chain, restart edge proxies, and monitor error burn rate."
+  },
+  {
+    "id": "RB-003",
+    "service": "auth-service",
+    "title": "Memory leak and OOM handling",
+    "symptoms": ["OOM_KILL", "RSS growth", "pod restart"],
+    "categories": ["runtime", "memory"],
+    "content": "Capture heap dump, rollback recent release, and enable memory profile sampling."
+  },
+  {
+    "id": "RB-004",
+    "service": "inventory-service",
+    "title": "Kafka lag remediation",
+    "symptoms": ["consumer lag", "event delay"],
+    "categories": ["streaming", "dependency"],
+    "content": "Scale consumers, inspect broker health, and verify partition assignment."
+  },
+  {
+    "id": "RB-005",
+    "service": "search-api",
+    "title": "Upstream timeout handling",
+    "symptoms": ["gateway timeout", "dependency degraded"],
+    "categories": ["network", "dependency"],
+    "content": "Trace upstream calls, review retry budget, and isolate degraded dependency."
+  }
+]

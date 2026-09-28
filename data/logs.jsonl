@@ -1,0 +1,12 @@
+2026-09-26T10:00:01Z|checkout-api|ERROR|req-1001|DB_TIMEOUT|db timeout while acquiring connection from pool
+2026-09-26T10:00:03Z|checkout-api|ERROR|req-1002|DB_TIMEOUT|pool exhausted near max open connections
+2026-09-26T10:01:00Z|payment-api|ERROR|req-2001|CERT_EXPIRED|x509 certificate has expired on edge proxy
+2026-09-26T10:01:03Z|payment-api|ERROR|req-2002|TLS_HANDSHAKE|tls handshake failed for upstream payment gateway
+2026-09-26T10:02:00Z|auth-service|ERROR|req-3001|OOM_KILL|container restarted after oom kill
+2026-09-26T10:02:10Z|auth-service|WARN|req-3002|MEMORY_HIGH|rss climbed above 95 percent
+2026-09-26T10:03:00Z|inventory-service|WARN|req-4001|KAFKA_LAG|consumer lag exceeded 20000 messages
+2026-09-26T10:04:00Z|search-api|ERROR|req-5001|UPSTREAM_TIMEOUT|recommendation service timeout after 5s
+2026-09-26T10:04:10Z|gateway|ERROR|req-6001|DNS_FAIL|nxdomain during service discovery
+2026-09-26T10:05:00Z|cache-layer|WARN|req-7001|EVICTION_SPIKE|redis evictions increased sharply
+2026-09-26T10:05:10Z|notification-worker|ERROR|req-8001|RATE_LIMIT|429 from sms provider
+2026-09-26T10:05:20Z|db-proxy|ERROR|req-9001|CONNECTION_RESET|frequent reset from primary db

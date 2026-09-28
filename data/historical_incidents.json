@@ -1,0 +1,37 @@
+[
+  {
+    "id": "HIST-101",
+    "service": "checkout-api",
+    "summary": "Checkout failures after release due to DB pool exhaustion",
+    "root_cause": "database_connection_pool_exhaustion",
+    "symptoms": ["DB_TIMEOUT", "latency", "5xx"]
+  },
+  {
+    "id": "HIST-102",
+    "service": "payment-api",
+    "summary": "Payment errors caused by expired edge certificate",
+    "root_cause": "expired_tls_certificate",
+    "symptoms": ["x509", "handshake"]
+  },
+  {
+    "id": "HIST-103",
+    "service": "auth-service",
+    "summary": "Auth pods recycled under memory pressure",
+    "root_cause": "memory_leak",
+    "symptoms": ["OOM_KILL", "memory"]
+  },
+  {
+    "id": "HIST-104",
+    "service": "gateway",
+    "summary": "Global traffic drop from DNS lookup failures",
+    "root_cause": "dns_failure",
+    "symptoms": ["NXDOMAIN", "dns"]
+  },
+  {
+    "id": "HIST-105",
+    "service": "search-api",
+    "summary": "Search latency due to upstream recommendation timeout",
+    "root_cause": "upstream_dependency_timeout",
+    "symptoms": ["timeout", "dependency degraded"]
+  }
+]

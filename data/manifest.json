@@ -1,0 +1,29 @@
+{
+  "service_hints": {
+    "checkout-api": {
+      "dependencies": ["postgres", "redis"],
+      "categories": ["database", "latency"],
+      "known_symptoms": ["DB_TIMEOUT", "connection pool", "5xx"]
+    },
+    "payment-api": {
+      "dependencies": ["tls_gateway"],
+      "categories": ["security", "network"],
+      "known_symptoms": ["x509", "certificate expired"]
+    },
+    "auth-service": {
+      "dependencies": ["cache", "db"],
+      "categories": ["runtime", "memory"],
+      "known_symptoms": ["OOM_KILL", "rss growth"]
+    },
+    "inventory-service": {
+      "dependencies": ["kafka"],
+      "categories": ["streaming", "dependency"],
+      "known_symptoms": ["consumer lag"]
+    },
+    "search-api": {
+      "dependencies": ["recommendation-api"],
+      "categories": ["network", "dependency"],
+      "known_symptoms": ["timeout", "dependency degraded"]
+    }
+  }
+}
